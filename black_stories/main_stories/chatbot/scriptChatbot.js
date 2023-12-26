@@ -1,3 +1,27 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Retrieve the story ID when the page loads
+    const selectedStoryId = getSelectedStoryId();
+    console.log('Selected Story ID:', selectedStoryId); // For debugging
+
+    // Update the 'storyIdDisplay' span with the actual selectedStoryId
+    const storyIdDisplay = document.getElementById('storyIdDisplay');
+    if(storyIdDisplay) {
+        storyIdDisplay.textContent = selectedStoryId; // Update text content
+    }
+});
+
+function getSelectedStoryId() {
+    // Retrieve from query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const storyId = urlParams.get('storyId');
+    console.log('URL Parameters:', Array.from(urlParams.entries())); // For debugging
+    return storyId || 'Not provided'; // Modify as needed
+}
+
+// ... rest of your sendMessage and other functions ...
+
+
+
 function sendMessage() {
     const input = document.getElementById('userInput');
     const message = input.value.trim();
@@ -5,14 +29,14 @@ function sendMessage() {
         // Add user message to dialogue window
         const dialogueWindow = document.getElementById('dialogueWindow');
         const userDiv = document.createElement('div');
-        userDiv.textContent = `User: ${message}`;
+        userDiv.textContent = `Player: ${message}`;
         userDiv.className = 'user-message';
         dialogueWindow.appendChild(userDiv);
         
         // Simulate a ChatGPT response
         const botResponse = getBotResponse(message); // Implement this based on selected story and rules
         const botDiv = document.createElement('div');
-        botDiv.textContent = `ChatGPT: ${botResponse}`;
+        botDiv.textContent = `Bot: ${botResponse}`;
         botDiv.className = 'bot-message';
         dialogueWindow.appendChild(botDiv);
 
