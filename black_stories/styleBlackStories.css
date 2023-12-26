@@ -1,0 +1,40 @@
+body {
+    font-family: 'Garamond', serif; /* Una tipografía más elegante */
+    background-color: #1c1c1c; /* Un fondo oscuro para el misterio */
+    color: #f8f8f2; /* Un color claro para el texto para contrastar con el fondo oscuro */
+    text-align: center;
+    padding: 20px;
+    width: 80%; 
+    margin: 0 auto; 
+    background-image: url('mystery-background.jpg'); /* Añadir imagen de fondo */
+    background-size: cover; /* Cubrir toda la pantalla con la imagen */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    color: #FF6347; 
+    font-size: 36px; /* Hacer el título más grande y misterioso */
+}
+
+.button-container {
+    margin-top: 50px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Botones ligeramente transparentes */
+    border: 2px solid #f8f8f2; /* Recuadro claro */
+    color: #f8f8f2;
+    text-decoration: none; 
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Aumentar transparencia al pasar el mouse */
+    color: #1c1c1c;
+    border-color: #FF6347; /* Cambio de color en el borde al pasar el mouse */
+}

@@ -1,0 +1,107 @@
+body {
+    font-family: 'Comic Sans'; /* Fuente más moderna y legible */
+    background-image: url('mystery-background.jpg');
+    background-size: cover;
+    color: #F5F5F5;
+    text-align: center;
+    padding: 40px 0;
+    width: 100%;
+}
+
+h1 {
+    font-size: 32px; /* Tamaño más grande para el título */
+    color: #FF6347;
+    margin-bottom: 30px;
+    font-weight: normal; /* Menos agresivo que bold */
+}
+
+.stories-container {
+    margin: 80px auto; /* Aumenta el margen para más espacio */
+}
+
+.story {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    margin: 50px auto; /* Aumenta el margen para más separación */
+    padding: 20px;
+    font-size: 26px;
+    cursor: pointer;
+    border: 2px solid #FF6347; /* Contorno rojo para destacar */
+    box-shadow: 0 0 10px #FF6347; /* Sombra para efecto 3D */
+    display: block; /* Asegura que cada historia sea un bloque propio */
+    width: 80%; /* Ancho relativo para mantener consistencia */
+    transition: all 0.3s ease;
+}
+
+.story:hover {
+    transform: scale(1.05); /* Aumenta ligeramente al pasar el mouse */
+    background-color: rgba(0, 0, 0, 0.9);
+    border-color: #FF4500; /* Cambio de color de borde al pasar el mouse */
+}
+
+.story:nth-child(odd) { /* Historias impares */
+    text-align: left;
+}
+
+.story:nth-child(even) { /* Historias pares */
+    text-align: right;
+}
+
+
+#playButton {
+    font-size: 80px;
+    margin: 50px auto;
+    background-color: #FF6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    position: fixed; /* Mantiene el botón fijo en la pantalla */
+    right: 20px; /* 20px desde el borde derecho */
+    bottom: 20px; /* 20px desde el borde inferior */
+    transition: background-color 0.3s;
+}
+
+#playButton:hover {
+    background-color: #FF4500;
+}
+
+#playButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; /* Asegura que el popup esté sobre otros elementos */
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.popup button {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
