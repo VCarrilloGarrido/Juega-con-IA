@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with ChatGPT</title>
+    <link rel="stylesheet" href="styleChat.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="dialogue-window" id="dialogueWindow">
+            <!-- Sample Dialogue Content -->
+            <div class="user-message">Player: Cuál es la historia seleccionada?</div>
+            <div class="bot-message">Bot: I'm a language model AI.</div>
+        </div>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Ask your question here:"/>
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script src="scriptChatbot.js"></script>
+</body>
+</html>
